@@ -1,0 +1,24 @@
+<h1>New Game</h1>
+<p>What's the longest word you can find?</p>
+
+  <!-- Trazer as letras pra ca -->
+  <h2> <%= @letters  %> </h2>
+
+   <!--  <form action="/score" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :letters, @letters %>
+      <input type="text" name="word" placeholder="Type your word">
+      <input type="play" value="Play" class="btn btn-warning btn-sm">
+      <button type="button" > Play </button>
+    </form>
+ -->
+<form action="/score" method="POST" class="form-inline">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <!-- <div class="input-group input-group"> -->
+    <input type="text" name="word" class="form-control">
+    <!-- <span class="input-group-btn"> -->
+      <input type="submit" value="Play" class="btn btn-default">
+    <!-- </span> -->
+  <!-- </div> -->
+</form>
